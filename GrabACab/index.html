@@ -1,0 +1,63 @@
+<!-- 
+    Meet Patel
+    December 6, 2019
+    This is a sign up form
+    and submitting this will create a user and redirect the page to sign in
+
+    Chnage log: 
+    1. Haven't added the functionaltiy of editing the ride
+    2. Haventn't valdiated the pages for security 
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+
+<body>
+  <form method="POST" action="signup.php">
+    <div class="signupform">
+      <center>
+        <b>
+          <h1>GrabACab</h1>
+        </b>
+        <h2>Sign Up</h2>
+      </center>
+
+
+      <label>First Name</label>
+      <input type="text" id="fname" name="fname" placeholder="First Name" required>
+
+      <label>Last Name</label>
+      <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+
+      <label>Mobile No.</label>
+      <input type="text" id="mobile" name="mobile" placeholder="Mobile" required>
+
+      <label>E-mail</label>
+      <input type="text" id="email" name="email" placeholder="E-mail" required>
+
+      <label>Password</label>
+      <input type="password" id="pwd" name="pwd" placeholder="Password" required>
+
+      <label>Confirm Password</label>
+      <input type="password" id="cnfpwd" name="cnfpwd" placeholder="Confirm Password" onchange="pwdverify()" required>
+
+      <button type="submit" id="signup" class="button">Sign Up</button>
+      <button type="button" id="signin" class="button"><u>Already a user?</u> Sign In</button>
+
+      <!-- This Javascript gets executed when signin button is clicked and will call the signin page -->
+      <script>
+        document.getElementById("signin").onclick = function () {
+          location.href = "signin.html";
+        }
+      </script>
+      <button type="reset" id="reset" class="button">Reset</button>
+
+    </div>
+  </form>
+</body>
+
+</html>

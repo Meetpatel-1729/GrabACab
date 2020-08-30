@@ -1,0 +1,45 @@
+<!-- 
+    Meet Patel
+    December 6, 2019
+    This is a sign in form
+    and submitting this will log in the user so user can book a ride
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign IN</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+
+<body>
+    <form method="POST" action="home.php">
+        <div class="signinform">
+            <center>
+                <b>
+                    <h1>Sign In</h1>
+                </b>
+            </center>
+
+            <label for="email">E-mail</label>
+            <input type="text" id="email" name="email" placeholder="E-mail" required>
+
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd" placeholder="Password" required>
+
+            <button type="submit" id="signin" class="button">Sign In</button>
+            <button type="button" id="signup" class="button"><u>Don't have an account?</u> Sign Up</button>
+            <button type="reset" id="reset" class="button">Reset</button>
+
+            <!-- This Javascript gets executed when signup button is clicked and will call the signup page -->
+            <script>
+                document.getElementById("signup").onclick = function () {
+                    location.href = "index.html";
+                }
+            </script>
+
+        </div>
+    </form>
+</body>
+
+</html>
